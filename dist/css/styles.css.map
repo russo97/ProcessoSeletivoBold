@@ -1,10 +1,12 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "ACCA,AAAA,CAAC,CAAC;EACA,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,OAAO,EAAE,MAAM;EACf,UAAU,EAAE,IAAI;EAChB,eAAe,EAAE,IAAI;EACrB,UAAU,EAAE,UAAU;CACvB;;AAED,AAAA,IAAI;AACJ,IAAI,CAAC;EACH,MAAM,EAAE,IAAI;EACZ,SAAS,EAAE,IAAI;CAChB;;AEZD,AAAA,IAAI,CAAC;EACH,QAAQ,EAAE,QAAQ;EAClB,gBAAgB,EDFV,OAAO;CCGd;;AAED,AAAA,UAAU,CAAC;EACT,MAAM,EAAE,MAAM;CACf;;ACRD,AAAA,OAAO,CAAC;EACN,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,SAAS;CAMlB;;AAJE,AAAD,kBAAY,CAAC;EACX,MAAM,EAAE,GAAG;EACX,gBAAgB,EFJT,OAAO;CEKf",
     "sources": [
         "../../scss/styles.scss",
         "../../scss/_reset.scss",
-        "../../scss/_global.scss"
+        "../../scss/_variables.scss",
+        "../../scss/_global.scss",
+        "../../scss/_header.scss"
     ],
     "names": [],
     "file": "styles.css"
