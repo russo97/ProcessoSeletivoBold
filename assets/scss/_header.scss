@@ -1,0 +1,153 @@
+
+.header {
+  width: 100%;
+  height: 24.875rem;
+  position: relative;
+  overflow: hidden;
+
+  @include breakpoint-up (tablet) {
+    height: 12.4375rem;
+  }
+
+  @include breakpoint-up (desktop) {
+    height: 25rem;
+  }
+
+  &::before {
+    z-index: -1;
+    content: "";
+    width: 200%;
+    height: 200%;
+    bottom: 0px;
+    right: 0px;
+    position: absolute;
+    background-color: $darkGray;
+    transform-origin: bottom right;
+    transition: transform .2s ease-in-out;
+    transform: rotate(20deg);
+
+    @include breakpoint-up (mobile) {
+      transform: rotate(10deg);
+    }
+
+    @include breakpoint-up (tablet) {
+      transform: rotate(5deg);
+    }
+  }
+
+  &__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    @include breakpoint-up (desktop) {
+      justify-content: center;
+    }
+  }
+
+  // estilização dos textos e titulo da header
+  &__text {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $tablet) and (max-width: $desktop) {
+      transform: translateY(-20px);
+    }
+
+    @include breakpoint-up (desktop) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__paragraph {
+    color: $white;
+    font-size: 1.25rem;
+    font-weight: normal;
+    font-family: 'Josefin Sans', sans-serif;
+
+    @include breakpoint-up (tablet) {
+      text-align: center;
+    }
+  }
+  
+  &__title {
+    color: $white;
+    font-size: 2.5rem;
+    font-family: 'Alata', sans-serif;
+
+    @include breakpoint-down (mobile) {
+      font-size: 2rem;
+    }
+
+    @media (min-width: $tablet) and (max-width: $desktop) {
+      margin-top: -10px;
+    }
+
+    @include breakpoint-up (desktop) {
+      text-align: center;
+    }
+  }
+  
+  &__subtitle {
+    color: $white;
+    margin: 1rem 0;
+    line-height: 1.5;
+    font-size: .875rem;
+    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+
+    @include breakpoint-up (tablet) {
+      margin: 0;
+      text-align: center;
+    }
+
+    @include breakpoint-up (desktop) {
+      margin-top: 20px;
+    }
+
+    @include breakpoint-down (desktop) {
+      max-width: 22.5rem;
+    }
+  }
+
+
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+
+    @media (min-width: $tablet) and (max-width: $desktop) {
+      display: none;
+    }
+  }
+
+  &__button {
+    width: 10rem;
+    height: 2.5rem;
+    margin: .5rem .2rem;
+    font-weight: 600;
+    border-radius: 4px;
+    font-size: .75rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include breakpoint-down (mobile) {
+      width: 9rem;
+      text-align: center;
+    }
+
+    @include breakpoint-down (smallmobile) {
+      width: 7rem;
+    }
+
+    @include breakpoint-up (desktop) {
+      margin: 0 1.3rem;
+    }
+  }
+}

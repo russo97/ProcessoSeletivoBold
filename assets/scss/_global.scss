@@ -1,0 +1,39 @@
+
+
+body {
+  position: relative;
+  background-color: $white;
+}
+
+button,
+.button {
+  color: $mediumGray;
+  background-color: $white;
+  padding: .75rem 1.4375rem;
+  transition: all .1s ease-in-out;
+  border: solid .0625rem $darkGray;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0rem .0625rem .375rem #00000029;
+
+  &:active {
+    transform: scale(.98);
+    box-shadow: 0rem .0625rem .375rem transparent;
+  }
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.onlymobile {
+  @include breakpoint-up (tablet) {
+    display: none !important;
+  }
+}
+
+.onlydesktop {
+  @include breakpoint-down (desktop) {
+    display: none !important;
+  }
+}

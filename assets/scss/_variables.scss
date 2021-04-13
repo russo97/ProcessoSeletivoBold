@@ -1,0 +1,19 @@
+
+// colors
+$white: #FFFFFF;
+$darkGray: #707070;
+$mediumGray: #888888;
+$lightGray: #00000029;
+
+// breakpoints
+$smallMobile: 22.5rem; // 360px
+$mobile: 23.4375rem; // 375px
+$tablet: 48rem; // 768px
+$desktop: 64rem; // 1024px
+
+$breakpoints: (
+  "smallmobile": $smallMobile,
+  "mobile": $mobile,
+  "tablet": $tablet,
+  "desktop": $desktop
+);
