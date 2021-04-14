@@ -28,13 +28,19 @@ button,
 }
 
 .onlymobile {
-  @include breakpoint-up (tablet) {
+  @include breakpoint-up (mobile) {
     display: none !important;
   }
 }
 
 .onlydesktop {
   @include breakpoint-down (desktop) {
+    display: none !important;
+  }
+}
+
+@media (max-width: $tablet) {
+  .hide-mobile {
     display: none !important;
   }
 }
