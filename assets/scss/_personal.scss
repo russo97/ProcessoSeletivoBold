@@ -11,6 +11,10 @@
     justify-content: center;
   }
 
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    display: none;
+  }
+
   &.open {
     #{$this}__title {
       &::after,

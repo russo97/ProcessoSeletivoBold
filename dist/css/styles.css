@@ -306,6 +306,12 @@ button:active,
   }
 }
 
+@media (min-width: 48rem) and (max-width: 64rem) {
+  .personal {
+    display: none;
+  }
+}
+
 .personal.open .personal__title::after, .personal.open .personal__title::before {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
