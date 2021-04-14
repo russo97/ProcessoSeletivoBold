@@ -38,3 +38,9 @@ button,
     display: none !important;
   }
 }
+
+@media (min-width: $tablet) and (max-width: $desktop) {
+  .hide-tablet {
+    display: none !important;
+  }
+}

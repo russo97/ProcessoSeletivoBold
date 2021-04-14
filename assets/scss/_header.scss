@@ -119,10 +119,6 @@
     align-items: center;
     flex-flow: row wrap;
     justify-content: space-evenly;
-
-    @media (min-width: $tablet) and (max-width: $desktop) {
-      display: none;
-    }
   }
 
   &__button {
