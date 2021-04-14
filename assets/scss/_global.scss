@@ -44,3 +44,9 @@ button,
     display: none !important;
   }
 }
+
+@media (max-width: $tablet), (min-width: $desktop) {
+  .only-tablet {
+    display: none !important;
+  }
+}
