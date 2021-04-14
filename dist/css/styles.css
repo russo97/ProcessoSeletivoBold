@@ -16,6 +16,7 @@ body {
 }
 
 body {
+  height: 5000px;
   position: relative;
   background-color: #FFFFFF;
 }
@@ -280,5 +281,202 @@ button:active,
   .header__button {
     margin: 0 1.3rem;
   }
+}
+
+.personal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1.25rem 0;
+}
+
+@media (min-width: 64rem) {
+  .personal {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.personal.open .personal__title::after, .personal.open .personal__title::before {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.personal.open .personal__title::after {
+  margin-top: -.125rem;
+}
+
+@media (max-width: 23.4375rem) {
+  .personal.open .personal__paragraph {
+    height: 40px;
+    white-space: wrap;
+  }
+}
+
+.personal__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+@media (min-width: 64rem) {
+  .personal__section {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 32.5rem;
+            flex: 0 32.5rem;
+  }
+}
+
+.personal__title {
+  font-weight: 400;
+  color: #888888;
+  font-size: 1.25rem;
+  position: relative;
+  padding-right: 1rem;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+@media (max-width: 23.4375rem) {
+  .personal__title::after, .personal__title::before {
+    content: '';
+    top: 50%;
+    right: 0px;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    -webkit-transform-origin: center 4.5px;
+            transform-origin: center 4.5px;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0rem .5625rem .5625rem .5625rem;
+  }
+  .personal__title::after {
+    margin-top: .125rem;
+    border-bottom-color: #FFFFFF;
+  }
+  .personal__title::before {
+    border-bottom-color: #707070;
+  }
+}
+
+.personal__paragraph {
+  height: auto;
+  font-weight: 400;
+  text-align: left;
+  overflow: hidden;
+  font-size: .75rem;
+  color: #888888;
+  line-height: 1.3;
+  margin-top: 1.0625rem;
+  text-overflow: ellipsis;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.personal__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 1.25rem;
+}
+
+@media (min-width: 64rem) {
+  .personal__form {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 21.25rem;
+            flex: 0 21.25rem;
+    margin: 0 0 0 3.75rem;
+  }
+}
+
+.personal__infolabel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: 600;
+  height: 3.1875rem;
+  margin: .625rem 0;
+  color: #888888;
+  font-size: .75rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.personal__infolabel input {
+  color: #707070;
+  height: 1.875rem;
+  padding-left: .5rem;
+  border: solid 1px #707070;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.personal__gender {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: .625rem;
+}
+
+.personal__genderradio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: .75rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.personal__genderradio:nth-child(2) {
+  margin-left: 2.5rem;
+}
+
+.personal__submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 2.4375rem;
+  margin-top: 1.25rem;
 }
 /*# sourceMappingURL=styles.css.map */
