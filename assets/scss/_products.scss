@@ -48,6 +48,7 @@
     @include breakpoint-up (tablet) {
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       margin-top: 0;
       grid-gap: 45px 41px;
       margin-top: 3.125rem;
