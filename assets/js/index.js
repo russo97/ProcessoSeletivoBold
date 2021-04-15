@@ -30,7 +30,14 @@
 
 
 
-
+  /**
+   * 
+   * generates an interval between executing functions
+   * 
+   * @param {Number} ms Required
+   * @returns {Promise}
+   * 
+   */
   function sleep (ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
@@ -71,7 +78,9 @@
 
 
 
-
+  /**
+   * after getting data, populate the DOM with them
+   */
   async function renderProducts () {
     for (let index = 0, len = products.products.length; index < len; index++) {
       await sleep(200).then(() => {
@@ -107,7 +116,7 @@
       }
     } = product;
 
-    $('.products__list').insertAdjacentHTML("beforeend", `
+    products.DOMList.insertAdjacentHTML("beforeend", `
       <div class="products__item bounce_in product-${id}">
         <div class="products__logo">
           <img src="https:${image}" alt="product logo" />
