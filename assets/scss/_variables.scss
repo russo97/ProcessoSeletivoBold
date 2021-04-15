@@ -7,13 +7,20 @@ $lightGray: #00000029;
 
 // breakpoints
 $smallMobile: 22.5rem; // 360px
-$mobile: 23.4375rem; // 375px
+$mobile: 30.0625rem; // 411px
 $tablet: 48rem; // 768px
 $desktop: 64rem; // 1024px
 
-$breakpoints: (
+$breakpoints-up: (
   "smallmobile": $smallMobile,
   "mobile": $mobile,
   "tablet": $tablet,
   "desktop": $desktop
+);
+
+$breakpoints-down: (
+  "smallmobile": 22.4375rem,
+  "mobile": 30rem,
+  "tablet": 47.9375rem,
+  "desktop": 63.9375rem
 );

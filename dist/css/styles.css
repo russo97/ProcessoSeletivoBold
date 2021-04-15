@@ -41,36 +41,41 @@ button:active,
           box-shadow: 0rem .0625rem .375rem transparent;
 }
 
+button:hover,
+.button:hover {
+  cursor: pointer;
+}
+
 .container {
   width: 90%;
   margin: 0 auto;
 }
 
-@media (min-width: 23.4375rem) {
+@media (min-width: 30.0625rem) {
   .onlymobile {
     display: none !important;
   }
 }
 
-@media (max-width: 64rem) {
+@media (max-width: 63.9375rem) {
   .onlydesktop {
     display: none !important;
   }
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 47.9375rem) {
   .hide-mobile {
     display: none !important;
   }
 }
 
-@media (min-width: 48rem) and (max-width: 64rem) {
+@media (min-width: 30rem) and (max-width: 63.9375rem) {
   .hide-tablet {
     display: none !important;
   }
 }
 
-@media (max-width: 48rem), (min-width: 64rem) {
+@media (max-width: 30rem), (min-width: 63.9375rem) {
   .only-tablet {
     display: none !important;
   }
@@ -114,7 +119,7 @@ button:active,
           transform: rotate(20deg);
 }
 
-@media (min-width: 23.4375rem) {
+@media (min-width: 30.0625rem) {
   .header::before {
     -webkit-transform: rotate(10deg);
             transform: rotate(10deg);
@@ -195,7 +200,7 @@ button:active,
   font-family: 'Alata', sans-serif;
 }
 
-@media (max-width: 23.4375rem) {
+@media (max-width: 30rem) {
   .header__title {
     font-size: 2rem;
   }
@@ -235,7 +240,7 @@ button:active,
   }
 }
 
-@media (max-width: 64rem) {
+@media (max-width: 63.9375rem) {
   .header__subtitle {
     max-width: 22.5rem;
   }
@@ -275,14 +280,14 @@ button:active,
           justify-content: center;
 }
 
-@media (max-width: 23.4375rem) {
+@media (max-width: 30rem) {
   .header__button {
     width: 9rem;
     text-align: center;
   }
 }
 
-@media (max-width: 22.5rem) {
+@media (max-width: 22.4375rem) {
   .header__button {
     width: 7rem;
   }
@@ -326,7 +331,7 @@ button:active,
   margin-top: -.125rem;
 }
 
-@media (max-width: 23.4375rem) {
+@media (max-width: 30rem) {
   .personal.open .personal__paragraph {
     height: 40px;
     white-space: wrap;
@@ -363,7 +368,7 @@ button:active,
   font-family: 'Josefin Sans', sans-serif;
 }
 
-@media (max-width: 23.4375rem) {
+@media (max-width: 30rem) {
   .personal__title::after, .personal__title::before {
     content: '';
     top: 50%;
@@ -579,7 +584,7 @@ button:active,
   margin-top: 1.4375rem;
 }
 
-@media (min-width: 23.4375rem) {
+@media (min-width: 30.0625rem) {
   .products__list {
     place-items: center;
   }
@@ -626,7 +631,7 @@ button:active,
   max-width: 24.5rem;
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 47.9375rem) {
   .products__item:not(:first-child) {
     margin-top: 1.875rem;
   }
@@ -854,7 +859,7 @@ button:active,
   font-family: 'Montserrat', sans-serif;
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 47.9375rem) {
   .share__infolabel:not(:first-child) {
     margin-top: 1.25rem;
   }
@@ -883,5 +888,60 @@ button:active,
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+.footer {
+  overflow: hidden;
+  height: 9.8125rem;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+  position: relative;
+  margin-top: 5.9375rem;
+}
+
+@media (min-width: 64rem) {
+  .footer {
+    height: 18.3275rem;
+  }
+}
+
+.footer::after {
+  content: '';
+  width: 200%;
+  height: 200%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  position: absolute;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+  background-color: #707070;
+}
+
+.footer__container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer__paragraph {
+  color: #FFFFFF;
+  font-weight: 300;
+  line-height: 1.8;
+  font-size: .75rem;
+  text-align: center;
+  -webkit-transform: translateY(1rem);
+          transform: translateY(1rem);
+  font-family: 'Josefin Sans', sans-serif;
 }
 /*# sourceMappingURL=styles.css.map */

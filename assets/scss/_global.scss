@@ -19,6 +19,10 @@ button,
     transform: scale(.98);
     box-shadow: 0rem .0625rem .375rem transparent;
   }
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .container {
@@ -38,19 +42,19 @@ button,
   }
 }
 
-@media (max-width: $tablet) {
+@media (max-width: 47.9375rem) {
   .hide-mobile {
     display: none !important;
   }
 }
 
-@media (min-width: $tablet) and (max-width: $desktop) {
+@media (min-width: 30rem) and (max-width: 63.9375rem) {
   .hide-tablet {
     display: none !important;
   }
 }
 
-@media (max-width: $tablet), (min-width: $desktop) {
+@media (max-width: 30rem), (min-width: 63.9375rem) {
   .only-tablet {
     display: none !important;
   }

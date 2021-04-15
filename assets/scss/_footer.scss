@@ -1,0 +1,44 @@
+
+.footer {
+  overflow: hidden;
+  height: 9.8125rem;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+  position: relative;
+  margin-top: 5.9375rem;
+
+  @include breakpoint-up (desktop) {
+    height: 18.3275rem;
+  }
+
+  &::after {
+    content: '';
+    width: 200%;
+    height: 200%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    position: absolute;
+    transform: rotate(-5deg);
+    transform-origin: top right;
+    background-color: $darkGray;
+  }
+
+  &__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__paragraph {
+    color: $white;
+    font-weight: 300;
+    line-height: 1.8;
+    font-size: .75rem;
+    text-align: center;
+    transform: translateY(1rem);
+    font-family: 'Josefin Sans', sans-serif;
+  }
+}
