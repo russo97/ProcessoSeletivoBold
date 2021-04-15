@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAEG,AAAD,gBAAQ,CAAC;EACP,UAAU,EAAE,MAAM;EAClB,SAAS,EAAE,QAAQ;CACpB",
-    "sources": [
-        "../../assets/scss/products.scss"
-    ],
-    "names": [],
-    "file": "products.css"
-}
