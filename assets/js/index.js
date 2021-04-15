@@ -3,6 +3,8 @@
   const products = {
     products: [],
 
+    DOMList: $('.products__list'),
+
     URL: 'https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1'
   };
 
@@ -26,6 +28,12 @@
 
 
 
+
+
+
+  function sleep (ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
 
 
 
@@ -64,11 +72,11 @@
 
 
 
-  function renderProducts () {
-    const DOMProductsStructure = [...document.querySelectorAll('.products__item')];
-
-    for (let index = 0, len = DOMProductsStructure.length; index < len; index++) {
-      fillTree(DOMProductsStructure[index], index);
+  async function renderProducts () {
+    for (let index = 0, len = products.products.length; index < len; index++) {
+      await sleep(200).then(() => {
+        fillTree(products.products[index]);
+      });
     }
   }
 
@@ -83,12 +91,12 @@
    * 
    * fill DOM with data that came from API 
    * 
-   * @param {Object} tree  Required
-   * @param {Number} index Required
+   * @param {Object} product Required
    * 
    */
-  function fillTree (tree, index) {
+  function fillTree (product) {
     const {
+      id,
       name,
       image,
       price,
@@ -97,22 +105,27 @@
       installments: {
         count, value
       }
-    } = products.products[index];
+    } = product;
 
-    // set image address
-    tree.querySelector('img').setAttribute('src', `https:${image}`);
+    $('.products__list').insertAdjacentHTML("beforeend", `
+      <div class="products__item bounce_in product-${id}">
+        <div class="products__logo">
+          <img src="https:${image}" alt="product logo" />
+        </div>
 
-    const productInfo = [
-      [ '.products__name', name ],
-      [ '.products__newprice', valueFormat(price) ],
-      [ '.products__oldprice', valueFormat(oldPrice) ],
-      [ '.products__description', description ],
-      [ '.products__plots', `ou ${count}x de ${valueFormat(value)}` ]
-    ];
+        <div class="products__info">
+          <p class="products__name">${name}</p>
+          <p class="products__description hide-mobile">
+            ${description}
+          </p>
+          <p class="products__oldprice">De: ${valueFormat(oldPrice)}</p>
+          <p class="products__newprice">Por: ${valueFormat(price)}</p>
+          <p class="products__plots">ou ${count}x de ${valueFormat(value)}</p>
 
-    productInfo.forEach( ([ selector, value ]) => {
-      tree.querySelector(selector).textContent = value;
-    });
+          <button class="products__buybutton">Comprar</button>
+        </div>
+      </div>
+    `);
   }
 
 
@@ -144,9 +157,9 @@
   document.addEventListener('DOMContentLoaded', e => {
     $('.personal__title').addEventListener('click', togglePersonalText);
 
-    $('form[name="personal__form"]').addEventListener('submit', e => {
+    [...document.querySelectorAll('form')].forEach(form => {
       // prevent default form behavior
-      e.preventDefault();
+      form.addEventListener('submit', e => e.preventDefault());
     });
 
     [...document.querySelectorAll('.products__moreitems')].forEach(button => {
